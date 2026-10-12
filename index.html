@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopNova — everyday finds, thoughtfully picked.">
+  <title>ShopNova | Everyday Finds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">✨ Fresh finds for every day · Free delivery on orders over ₹999</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ShopNova home"><span class="brand-mark">S</span>shop<span>nova</span><small>EVERYDAY FINDS</small></a>
+    <button class="location" type="button" aria-label="Delivery location"><span class="pin">⌖</span><span><small>Delivering to</small><strong>Chennai 600001</strong></span></button>
+    <form class="search" id="searchForm" role="search">
+      <label class="sr-only" for="searchInput">Search products</label>
+      <select id="searchCategory" aria-label="Search category"><option value="all">All</option><option>Electronics</option><option>Fashion</option><option>Home</option><option>Beauty</option><option>Mobiles</option><option>Books</option><option>Sports</option></select>
+      <input id="searchInput" type="search" placeholder="Search for your next favourite..." autocomplete="off">
+      <button aria-label="Search" type="submit">⌕</button>
+    </form>
+    <div class="header-actions">
+      <button class="header-link language" id="languageButton" type="button">🇮🇳 EN⌄</button>
+      <button class="header-link account" id="accountButton" type="button"><small>Hello, shopper</small><strong>Account & Lists⌄</strong></button>
+      <button class="header-link orders" id="ordersButton" type="button"><small>Track your</small><strong>Orders</strong></button>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Open shopping cart"><span class="cart-icon">🛒</span><span>Cart</span><b id="cartCount">0</b></button>
+    </div>
+    <div class="account-popover" id="accountPopover" hidden><strong>Welcome to ShopNova</strong><p>Your demo account is ready to explore.</p><button type="button" id="closeAccount">Got it</button></div>
+  </header>
+  <nav class="main-nav" aria-label="Main navigation">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false">☰ All departments</button>
+    <div class="nav-links" id="navLinks">
+      <button data-category="all" class="nav-link active">All</button>
+      <button data-category="all" class="nav-link">Best Sellers</button>
+      <button data-category="deals" class="nav-link">Today's Deals</button>
+      <button data-category="Electronics" class="nav-link">Electronics</button>
+      <button data-category="Fashion" class="nav-link">Fashion</button>
+      <button data-category="Home" class="nav-link">Home & Kitchen</button>
+      <button data-category="Books" class="nav-link">Books</button>
+      <button data-category="Sports" class="nav-link">Sports</button>
+      <span class="nav-note">Small joys. Smart prices.</span>
+    </div>
+  </nav>
+  <main>
+    <section class="hero" aria-label="Featured offers">
+      <div class="hero-content">
+        <p class="eyebrow" id="heroEyebrow">THE EVERYDAY EDIT · 01</p>
+        <h1 id="heroTitle">A little upgrade<br>goes a long way.</h1>
+        <p id="heroText">Good design, useful tech and feel-good finds — all in one place.</p>
+        <a class="hero-cta" href="#products">Explore the edit <span>→</span></a>
+      </div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"><div class="hero-orbit"></div><div class="hero-product">✦</div><span class="floating-tag">GOOD FINDS<br><b>GOOD FEELING</b></span></div>
+      <div class="hero-controls"><button id="prevSlide" aria-label="Previous banner">←</button><span id="slideCount">01 / 03</span><button id="nextSlide" aria-label="Next banner">→</button></div>
+    </section>
+
+    <section class="benefits" aria-label="Shopping benefits">
+      <div><span>↗</span><p><strong>Picked with care</strong><small>Useful, lovely essentials</small></p></div>
+      <div><span>◇</span><p><strong>Easy returns</strong><small>Shop with confidence</small></p></div>
+      <div><span>⌁</span><p><strong>Secure checkout</strong><small>Your details stay yours</small></p></div>
+      <div><span>♡</span><p><strong>Made for real life</strong><small>Everyday value, always</small></p></div>
+    </section>
+
+    <section class="category-section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR THING</p><h2>Shop by category</h2></div><p class="muted">A good place to start.</p></div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-tile selected" data-category="all"><span class="category-emoji">✦</span><strong>Everything</strong><small>Browse all finds</small></button>
+        <button class="category-tile" data-category="Electronics"><span class="category-emoji">🎧</span><strong>Electronics</strong><small>Smart little upgrades</small></button>
+        <button class="category-tile" data-category="Fashion"><span class="category-emoji">👜</span><strong>Fashion</strong><small>Wear your mood</small></button>
+        <button class="category-tile" data-category="Home"><span class="category-emoji">🏡</span><strong>Home & Kitchen</strong><small>Make space lovely</small></button>
+        <button class="category-tile" data-category="Beauty"><span class="category-emoji">🌿</span><strong>Beauty</strong><small>Your daily ritual</small></button>
+        <button class="category-tile" data-category="Mobiles"><span class="category-emoji">📱</span><strong>Mobiles</strong><small>Stay connected</small></button>
+        <button class="category-tile" data-category="Books"><span class="category-emoji">📚</span><strong>Books</strong><small>Turn a new page</small></button>
+        <button class="category-tile" data-category="Sports"><span class="category-emoji">🏃</span><strong>Sports</strong><small>Move a little more</small></button>
+      </div>
+    </section>
+
+    <section class="product-section section-wrap" id="products">
+      <div class="section-heading product-heading"><div><p class="eyebrow">THE SHOPNOVA SHORTLIST</p><h2 id="productTitle">Good things, right this way.</h2><p class="muted" id="resultCount">12 hand-picked finds</p></div>
+        <label class="sort-control">Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option><option value="discount">Biggest discount</option></select></label>
+      </div>
+      <div class="active-filters" id="activeFilters"></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No finds just yet</h3><p>Try another search or category.</p><button class="primary-button" id="resetFilters">Show all products</button></div>
+    </section>
+
+    <section class="newsletter section-wrap">
+      <div><p class="eyebrow">A NOTE FROM SHOPNOVA</p><h2>Good finds, straight to your inbox.</h2><p>New drops, little discoveries and occasional lovely offers.</p></div>
+      <form id="newsletterForm"><label class="sr-only" for="emailInput">Email address</label><input id="emailInput" type="email" placeholder="Your email address" required><button type="submit">Count me in ↗</button><small id="newsletterMessage" aria-live="polite">No spam. Just the good stuff.</small></form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand footer-brand" href="#"><span class="brand-mark">S</span>shop<span>nova</span><small>EVERYDAY FINDS</small></a><p>Thoughtful finds for the everyday.</p><a href="#top" class="back-top">Back to top ↑</a></div>
+    <div class="footer-columns">
+      <div><h3>Get to know us</h3><a href="#about">Our story</a><a href="#about">How we pick</a><a href="#about">Careers</a></div>
+      <div><h3>Make yourself at home</h3><a href="#products">Your account</a><a href="#products">Your orders</a><a href="#products">Wishlist (coming soon)</a></div>
+      <div><h3>Let us help</h3><a href="#help">Shipping & delivery</a><a href="#help">Returns & refunds</a><a href="#help">Help centre</a></div>
+      <div><h3>Shop by mood</h3><a href="#products">Everyday tech</a><a href="#products">Little luxuries</a><a href="#products">Gifts under ₹1,000</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 ShopNova · Student frontend project</span><span>Privacy · Terms · Accessibility</span><span>Made for learning, not for checkout.</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cart-overlay" id="cartOverlay" hidden>
+    <button class="overlay-backdrop" id="closeCartBackdrop" aria-label="Close cart"></button>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer-heading"><div><p class="eyebrow">YOUR BAG</p><h2 id="cartTitle">Shopping cart <span id="drawerCount">(0)</span></h2></div><button id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty"><span>🛍️</span><h3>Your bag is taking a breather</h3><p>Add something you love and it will show up here.</p></div>
+      <div class="cart-summary" id="cartSummary" hidden><div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><small>Shipping and taxes calculated at checkout.</small><button id="checkoutButton" class="primary-button">Continue to checkout · Demo</button></div>
+    </aside>
+  </div>
+</body>
+</html>
