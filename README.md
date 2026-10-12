@@ -1,86 +1,63 @@
-# ShopNova — E-commerce Homepage Replication
+# ShopNova – E-Commerce Homepage Replication
 
-ShopNova is an original, responsive e-commerce homepage built from scratch as a frontend development assignment inspired by common online-shopping design patterns. It does **not** use Amazon's logo, copied source code, or Amazon's promotional copy.
+## 1. Project Description
 
-## Technologies
-- HTML5 semantic structure
-- CSS3, Flexbox, CSS Grid, responsive media queries
-- Vanilla JavaScript (no framework or build step)
-- Remote product photography from Unsplash Source URLs
+ShopNova is a responsive e-commerce website developed using HTML5, CSS3, and JavaScript. The project is inspired by the layout and functionality of Amazon India. It provides a user-friendly interface for browsing products, searching for items, filtering products by category, sorting products, and adding products to a shopping cart. The website uses original branding, product information, and promotional content to create an engaging online shopping experience.
 
-## Features
-- Brand header with delivery area, search, language, account, orders, and cart
-- Responsive category navigation with mobile menu
-- Three-slide promotional hero with previous/next controls
-- Eight category tiles
-- 12 sample products with images, category, ratings, prices, original prices, discounts, and badges
-- Product search by name, category, and description
-- Category filtering and deal filter
-- Sorting by price, rating, and discount
-- Add to cart, quantity controls, remove item, live cart count, and subtotal
-- Wishlist button interaction (session-only demo)
-- Newsletter form feedback (no real mailing-list service)
-- Accessible labels, keyboard Escape to close cart, and reduced-motion support
-- Responsive desktop, tablet, and mobile layouts
+## 2. Technologies Used
 
-## Run locally
-1. Download or clone this repository.
-2. Open `index.html` directly in a browser, or use VS Code's **Live Server** extension.
-3. An internet connection is required for Google Fonts and the remote product images. The site itself has no build step or backend.
+- **HTML5:** Used to create the structure of the website, including the header, navigation bar, hero section, product cards, and footer.
+- **CSS3:** Used to style the website, apply colors, fonts, spacing, animations, and create a visually appealing interface.
+- **JavaScript:** Used to implement interactive features such as product search, category filtering, product sorting, banner slider, and shopping cart functionality.
+- **Flexbox and CSS Grid:** Used to arrange website elements and product cards efficiently.
+- **Responsive Web Design:** Used to make the website compatible with desktops, tablets, and mobile devices.
+- **Visual Studio Code:** Used as the development environment for writing and editing code.
+- **GitHub:** Used to store, manage, and share the project source code.
+- **GitHub Pages:** Used to host and publish the website online.
 
-## Deploy
-### GitHub Pages
-1. Create a GitHub repository named `shopnova-ecommerce`.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then save.
-6. Wait for the Pages URL to appear. It usually follows `https://YOUR-USERNAME.github.io/shopnova-ecommerce/`.
+## 3. Features Implemented
 
-Official guide: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+1. **Header Section:** Includes the ShopNova logo, delivery location, search bar, language option, account section, orders section, and shopping cart.
+2. **Navigation Bar:** Provides category links such as All, Best Sellers, Today's Deals, Electronics, Fashion, Home & Kitchen, Books, and Sports.
+3. **Hero Banner Slider:** Displays promotional messages with previous and next navigation controls.
+4. **Category Section:** Allows users to browse products by category.
+5. **Product Cards:** Displays 12 products with images, names, ratings, current prices, original prices, discounts, and Add to Cart buttons.
+6. **Product Search:** Allows users to search for products by name, category, or description.
+7. **Category Filtering:** Displays products belonging to the selected category.
+8. **Product Sorting:** Allows users to sort products by price, rating, and discount.
+9. **Shopping Cart:** Supports adding products, changing quantities, removing products, updating the cart count, and calculating the subtotal.
+10. **Responsive Design:** Adjusts the layout for desktop, tablet, and mobile screens.
+11. **Footer Section:** Contains company information, customer support links, and shopping categories.
+12. **Newsletter Form:** Provides a demonstration of email input and form confirmation.
+13. **GitHub Pages Deployment:** Makes the website accessible online through a public URL.
 
-### Netlify alternative
-1. Push the project to GitHub.
-2. In Netlify, choose **Add new project → Import an existing project** and connect the repository.
-3. No build command is needed for this plain static site; publish directory is the repository root.
-4. Publish and copy the generated site URL.
+## 4. Instructions to Run the Project Using GitHub
 
-Official guide: https://docs.netlify.com/start/quickstarts/deploy-from-repository/
+1. **Open GitHub:** Visit [https://github.com/](https://github.com/) and sign in to your account.
+2. **Open the Repository:** Navigate to the GitHub repository containing the ShopNova project.
+3. **Check Project Files:** Ensure that `index.html`, `style.css`, and `script.js` are uploaded to the repository's root directory.
+4. **Open Repository Settings:** Click the **Settings** tab in your repository.
+5. **Enable GitHub Pages:** Select **Pages** from the sidebar under the Code and automation section.
+6. **Configure Deployment:** Under Build and deployment, select **Deploy from a branch**, choose the `main` branch and the `/(root)` folder, and click **Save**.
+7. **Wait for Deployment:** Allow GitHub Pages a few minutes to build and publish the website.
+8. **Access the Live Website:** Open the published website link provided in the Pages section. The URL usually follows this format: `https://YOUR-USERNAME.github.io/shopnova-ecommerce/`.
+9. **Test Website Functionality:** Open the live website in a browser and test product search, category filtering, sorting, the banner slider, and shopping cart functionality.
+10. **Share the Project:** Submit the GitHub repository URL and the live website URL for review.
 
-## Suggested Git commands
-```bash
-git init
-git add .
-git commit -m "Build ShopNova e-commerce homepage"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/shopnova-ecommerce.git
-git push -u origin main
-```
-Replace `YOUR-USERNAME` with your GitHub username.
+**Note:** An internet connection is required to load the external product images and fonts. Ensure that `index.html` is located in the repository's root directory to avoid a 404 error.
 
-## Testing checklist
-- [ ] Search by product name and partial text
-- [ ] Change category from both category tiles and navigation
-- [ ] Test Today's Deals and Best Sellers
-- [ ] Sort by price low/high, rating, and discount
-- [ ] Add several products; verify cart count and subtotal
-- [ ] Increase/decrease quantities and remove items
-- [ ] Open/close cart with close button, backdrop, and Escape
-- [ ] Test banner previous/next controls
-- [ ] Open mobile navigation and test at narrow width
-- [ ] Test newsletter validation and confirmation
-- [ ] Check browser console and verify all product images load
-- [ ] Capture desktop and mobile screenshots after final testing
+## 5. Challenges Faced During Development
 
-## Challenges faced (edit to reflect your actual experience)
-- Keeping product cards consistent across desktop, tablet, and mobile breakpoints.
-- Coordinating search, category filtering, and sorting without a frontend framework.
-- Maintaining a correct cart count and subtotal when quantities change.
-- Making navigation and cart controls usable on touch screens.
-- Using remote images while allowing a graceful visual fallback if an image fails.
+1. **Responsive Layout:** Designing the website to display correctly across desktop, tablet, and mobile devices required careful use of CSS Flexbox, Grid, and media queries.
+2. **Product Search and Filtering:** Implementing search and category filtering required managing product data and updating the displayed products dynamically using JavaScript.
+3. **Shopping Cart Management:** Maintaining the correct cart item count, product quantities, and subtotal required handling different user interactions.
+4. **Product Sorting:** Implementing multiple sorting options required organizing product data according to price, rating, and discount.
+5. **Navigation and Interactivity:** Creating a responsive navigation menu, promotional banner slider, and interactive buttons required JavaScript event handling.
+6. **Testing and Debugging:** Testing the website across different screen sizes and verifying interactive features helped identify and resolve implementation issues.
+7. **GitHub Pages Deployment:** Configuring the repository and publishing the website required ensuring that the correct files were uploaded and that the deployment settings were configured properly.
 
-## Limitations
-- This is a frontend-only demonstration. It does not include authentication, a database, inventory, real checkout, payment processing, or a real newsletter backend.
-- Product data and cart state are held in JavaScript memory and reset on page reload.
-- Remote images/fonts require internet access.
-- Update the challenges section and add your own screenshots/links before submission.
+Through this project, I gained practical experience in frontend development, responsive web design, JavaScript DOM manipulation, event handling, GitHub repository management, and website deployment.
+
+## 6. Conclusion
+
+The ShopNova E-Commerce Homepage Replication project demonstrates the use of HTML5, CSS3, and JavaScript to develop a responsive and interactive online shopping interface. It includes essential e-commerce features such as product browsing, searching, filtering, sorting, and cart management. The project helped develop practical skills in frontend development, responsive design, interactive programming, and website deployment using GitHub Pages.
